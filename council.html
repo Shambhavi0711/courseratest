@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Council</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		body{
+			background-color: rgba(27,31,34,0.6);
+			background-image: url('WhatsApp Image 2020-07-15 at 6.44.38 PM.jpeg');
+		}
+		img{
+			width: 100%;
+			height: 500px;
+		}
+		 #slider{
+		 	width: 500px;
+		 	height: 500px;
+		 	left: 25%;
+		 	top: 47%;
+		 	transform: translate(-50%,-50%);
+		 	margin: 20px auto;
+		 	position: absolute;
+		 	border: 10px solid white;
+		 	box-shadow: 0px 0px 5px 2px #ccc;
+		 }
+		 #btn{
+		 	padding: 20px;
+		 	border: none;
+		 	background: rgba(27,31,34,0.6);
+		 	font-size: 30px;
+		 	color: white;
+		 	position: absolute;
+		 	top:45%;
+		 	cursor: pointer;
+		 }
+
+        .next{
+        	border-radius: 10px 0px 0px 10px;
+        	position: fixed;
+        	right: 0px;
+        }
+        .prev{
+        	border-radius: 0px 10px 10px 0px;
+        }
+
+        a{
+        	text-decoration: none;
+        }
+        #fb{
+        	position: absolute;
+        	background: #3b5998;
+        	color: white;
+        	border-radius: 20%;
+        	font-size: 50px;
+        	padding: 5px;
+        	height: 50px;
+        	text-align: right;
+        	width: 50px;
+        	left: 670px;
+        	bottom: 0px;
+
+        }
+
+        #insta{
+        	position: absolute;
+        	background-image: url('instaicon.png');
+        	color: white;
+        	height: 60px;
+        	border-radius: 40%;
+        	width: 60px;
+        	left: 750px;
+        	bottom: 0px;
+        }
+
+                #mail{
+        	position: absolute;
+        	background-image: url('gmailicon.jpg');
+        	color: white;
+        	height: 55px;
+        	border-radius: 10%;
+        	width: 75px;
+        	left: 830px;
+        	bottom: 0px;
+        }
+
+                #linkedin{
+        	position: absolute;
+        	background: #0E76A8;
+        	color: white;
+        	border-radius: 10%;
+        	font-size: 50px;
+        	padding: 5px;
+        	height: 50px;
+        	text-align: center;
+        	width: 50px;
+        	left: 920px;
+        	bottom: 0px;
+
+        }
+
+        #text{
+        	letter-spacing: 1px;
+        	font-size: 40px;
+        	text-align: center;
+
+        	font-family: Helvetica;
+        	color:white;
+        	padding-top: 20px;
+        	position: absolute;
+        	left: 750px;
+
+        }
+          #hostel{
+        	letter-spacing: 1px;
+        	font-size: 30px;
+        	text-align: center;
+
+        	font-family: Helvetica;
+        	color:white ;
+        	padding-top: 150px;
+        	position: absolute;
+        	left: 800px;
+
+        }
+	</style>
+</head>
+<body>
+
+	<div id="slider">
+		<div id="box">
+			<img src="shambhavi.jpg">
+		</div>
+
+		<!-- buttons for controls slider -->
+		<button class="prev fa fa-chevron-left" onclick="prevImage()" id="btn"></button>
+		<button class="next fa fa-chevron-right" onclick="nextImage()" id="btn"></button>
+		
+		<div id="box1"> 
+		<a id="fb" href="https://www.facebook.com/shambhavi.sinha.35762/" class="fa fa-facebook"></a>
+		</div>
+		<div id="box2">
+		<a id="insta" href="https://www.instagram.com/shambhavi_0711/"></a>
+		</div>
+		<div id="box3">
+		<a id="mail" href="mailto:shambhavisinha71@gmail.com"></a>
+		</div>
+		<div id="box4">
+		<a id="linkedin" href="https://www.linkedin.com/in/shambhavi-sinha-3b6a43192/" class="fa fa-linkedin"></a>
+		</div>
+	</div>
+	<div id="text">
+		<h3 id="header">
+			Web Secretary
+		</h3>
+	</div>
+		<p id="hostel">
+			Hostel 15
+		</p>
+
+
+
+  <script type="text/javascript">
+
+  	var slider_content = document.getElementById('box');
+  	var slider1_content = document.getElementById('fb');
+  	var slider2_content = document.getElementById('insta');
+  	var slider3_content = document.getElementById('mail');
+  	var slider4_content = document.getElementById('linkedin');
+  	var slider5_content = document.getElementById('header');
+
+  	// contain images in an array
+    var image = ['shambhavi','mitanshi', 'khyati', 'pragati'];
+
+    var i = 0;
+
+    var fblinks = ["https://www.facebook.com/shambhavi.sinha.35762/","https://www.facebook.com/mitanshi.mehra.9","https://www.facebook.com/khyati.jain.71653","https://www.facebook.com/pragati.anand.942"];
+    var instalinks = ["https://www.instagram.com/shambhavi_0711/","https://www.instagram.com/mehra_mitanshi26/","https://www.instagram.com/khyati.1105/","https://www.instagram.com/pragati_anand04/"];
+    var maillinks = ["mailto:shambhavisinha71@gmail.com","https://www.facebook.com/mitanshi.mehra.9","https://www.facebook.com/khyati.jain.71653","https://www.facebook.com/"];
+    var linkedinlinks = ["https://www.linkedin.com/in/shambhavi-sinha-3b6a43192/","https://www.linkedin.com/in/mitanshi-mehra-20010626/","https://www.linkedin.com/in/khyati-jain-9438241a0/","https://www.linkedin.com/in/pragati-anand-714218193/"];
+    var header_cont = ["Web Secretary", "Social Secretary", "Alumni Secretary", "Class Representative"]
+
+
+    // function for next slide 
+
+    function nextImage(){
+    	if (i<3) {
+    		i= i+1;
+    	}else{
+    		i = 0;
+    	}
+    	  slider_content.innerHTML = "<img src="+image[i]+".jpg>";
+    	  slider1_content.href = fblinks[i];
+    	  slider2_content.href = instalinks[i];
+    	  slider3_content.href = maillinks[i];
+    	  slider4_content.href = linkedinlinks[i];
+    	  header.innerHTML = header_cont[i];
+
+    	  
+    }
+
+
+    // function for prew slide
+
+    function prevImage(){
+    	if(i==0){
+    		i = 3;
+    	}
+    	else{
+    		i=i-1;
+    	}
+    	  slider_content.innerHTML = "<img src="+image[i]+".jpg>";
+    	  slider1_content.href = fblinks[i];
+    	  slider2_content.href = instalinks[i];
+    	  slider3_content.href = maillinks[i];
+    	  slider4_content.href = linkedinlinks[i];
+          header.innerHTML = header_cont[i];
+
+    }
+    
+
+  setInterval(nextImage , 60000);
+
+  </script>
+
+
+</body>
+</html>
